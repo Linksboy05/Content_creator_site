@@ -1,0 +1,82 @@
+.root {
+  bg: #0b0e11;
+  text: #e7edf4;
+  muted: #9fb0c3;
+  accent: #39ff14;
+  card-bg: rgba(255,255,255,0.05);
+  radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background: var(bg);
+  color: var(text);
+}
+
+.wrap { width: min(1100px, 92%); margin: auto; }
+.section { padding: 60px 0; }
+h1, h2, h3 { margin: 0 0 12px; }
+a { text-decoration: none; color: inherit; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: var(radius);
+  background: var(accent);
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #4dff4d;
+}
+
+/* Header */
+.site-header {
+  background: rgba(0,0,0,0.7);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: bold; display: flex; align-items: center; gap: 10px; }
+.brand-logo { background: var(accent); padding: 4px; border-radius: 6px; }
+
+/* Nav */
+.main-nav { display: flex; gap: 20px; }
+.nav-toggle { display: none; }
+.hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+.hamburger span { background: var(text); height: 2px; width: 20px; }
+
+/* Hero */
+.hero { padding: 50px 0; }
+.hero-inner { display: flex; flex-wrap: wrap; gap: 20px; }
+.hero-copy { flex: 1; }
+.hero-media { flex: 1; }
+.video-poster { background: #222; border-radius: var(radius); height: 250px; }
+
+/* Schedule */
+.schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, fr)); gap: 10px; }
+.card { background: var(card-bg); padding: 20px; border-radius: var(radius); text-align: center; }
+
+/* VODs */
+.vod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, fr)); gap: 16px; }
+.vod-thumb { background: #333; height: 120px; border-radius: var(radius) var(radius) 0 0; }
+.vod-meta { padding: 10px; }
+
+/* Sponsors */
+.sponsor-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+.sponsor-card { background: var(card-bg); padding: 10px; border-radius: var(radius); display: flex; align-items: center; justify-content: center; }
+.sponsor-card img { max-width: 150px; height: auto; }
+
+/* Donations */
+.donation-section { text-align: center; }
+.donation-buttons { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+
+/* Socials */
+.socials-grid { display: flex; gap: 16px; }
+.social { background: var(card-bg); padding: 14px; border-radius: var(radius); text-align: center; flex: 1; }
+
+/* Footer */
+.site-footer { background: rgba(0,0,0,0.8); padding: 20px 0; text-align: center; }
