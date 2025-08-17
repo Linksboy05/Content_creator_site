@@ -13,6 +13,17 @@
 
   <!-- JS -->
   <script src="script.js" defer></script>
+  <style>
+    /* Header links for sections */
+    .header-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    .header-link:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
@@ -35,10 +46,10 @@
       <nav class="main-nav">
         <a href="#live">Live</a>
         <a href="#schedule">Schedule</a>
-        <a href="vods.html">VODs</a>           <!-- Separate VODs page -->
+        <a href="vods.html">VODs</a>
         <a href="#about">About</a>
-        <a href="sponsors.html">Sponsors</a>   <!-- Separate Sponsors page -->
-        <a href="support.html">Support</a>     <!-- Separate Support/Donations page -->
+        <a href="sponsors.html">Sponsors</a>
+        <a href="support.html">Support</a>
         <a href="#socials">Socials</a>
       </nav>
     </div>
@@ -81,7 +92,7 @@
     <!-- Latest VODs Section -->
     <section id="vods" class="section">
       <div class="wrap">
-        <h2>Latest VODs</h2>
+        <h2><a href="vods.html" class="header-link">Latest VODs</a></h2>
         <div class="vod-grid">
           <a class="vod card" href="#" target="_blank">
             <div class="vod-thumb"></div>
@@ -106,7 +117,7 @@
           </a>
         </div>
         <div style="margin-top:20px; text-align:center;">
-          <a href="vods.html" class="btn btn-primary">See All VODs</a>  <!-- Link to full VOD page -->
+          <a href="vods.html" class="btn btn-primary">See All VODs</a>
         </div>
       </div>
     </section>
@@ -122,14 +133,14 @@
     <!-- Sponsors Section -->
     <section id="sponsors" class="section">
       <div class="wrap">
-        <h2>My Sponsors</h2>
+        <h2><a href="sponsors.html" class="header-link">My Sponsors</a></h2>
         <div class="sponsor-grid">
           <a href="#" target="_blank" class="sponsor-card"><img src="sponsor1.png" alt="Sponsor 1"></a>
           <a href="#" target="_blank" class="sponsor-card"><img src="sponsor2.png" alt="Sponsor 2"></a>
           <a href="#" target="_blank" class="sponsor-card"><img src="sponsor3.png" alt="Sponsor 3"></a>
         </div>
         <div style="margin-top:20px; text-align:center;">
-          <a href="sponsors.html" class="btn btn-primary">See All Sponsors</a>  <!-- Link to full Sponsors page -->
+          <a href="sponsors.html" class="btn btn-primary">See All Sponsors</a>
         </div>
       </div>
     </section>
@@ -137,14 +148,14 @@
     <!-- Donations Section -->
     <section id="donations" class="section donation-section">
       <div class="wrap">
-        <h2>Support the Stream</h2>
+        <h2><a href="support.html" class="header-link">Support the Stream</a></h2>
         <p>Your support helps keep the content coming! You can donate directly through the options below:</p>
         <div class="donation-buttons">
           <a class="btn btn-primary" href="https://paypal.me/YourLink" target="_blank">Donate via PayPal</a>
           <a class="btn btn-primary" href="https://streamlabs.com/YourLink" target="_blank">Donate via Streamlabs</a>
         </div>
         <div style="margin-top:20px; text-align:center;">
-          <a href="support.html" class="btn btn-primary">Go to Support Page</a>  <!-- Link to full Support page -->
+          <a href="support.html" class="btn btn-primary">Go to Support Page</a>
         </div>
       </div>
     </section>
