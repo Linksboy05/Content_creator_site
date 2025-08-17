@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DMERSE — Support</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background: #0b0e11;
+      position: relative;
+    }
+    main { flex: 1; }
+
+    /* Particle background */
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0; /* behind content */
+      overflow: hidden;
+      background: #0b0e11;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <div id="particles"></div>
+
+  <!-- Header -->
+  <header class="site-header" style="position:relative; z-index:1;">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">▶</span>
+        <span class="brand-text">DMERSE</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+
+      <nav class="main-nav">
+        <a href="index.html#live">Live</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="vods.html">VODs</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#sponsors">Sponsors</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="index.html#socials">Socials</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Support Section -->
+  <main style="position:relative; z-index:1;">
+    <section class="section donation-section">
+      <div class="wrap">
+        <h2>💚 Support the Stream</h2>
+        <p>Your support keeps the streams alive and the content coming! Here are ways you can contribute:</p>
+
+        <!-- Donation Buttons -->
+        <div class="donation-buttons">
+          <a class="btn btn-primary" href="https://paypal.me/YourLink" target="_blank">💵 Donate via PayPal</a>
+          <a class="btn btn-primary" href="https://ko-fi.com/YourLink" target="_blank">☕ Buy Me a Coffee</a>
+          <a class="btn btn-primary" href="https://www.patreon.com/YourLink" target="_blank">🎁 Support on Patreon</a>
+        </div>
+
+        <!-- Top Supporters -->
+        <div class="supporters card" style="margin-top: 40px; text-align:center;">
+          <h3>🌟 Top Supporters</h3>
+          <ul style="list-style:none; padding:0; margin-top:10px;">
+            <li>🔥 Alex - Top Donator</li>
+            <li>💎 Jordan - Longest Sub</li>
+            <li>😂 Sam - Clip Master</li>
+          </ul>
+        </div>
+
+        <!-- Goal Tracker -->
+        <div class="goal card" style="margin-top:40px; text-align:center;">
+          <h3>🎯 Goal: New Streaming Mic</h3>
+          <progress value="45" max="100" style="width:100%; height:20px; border-radius:12px;"></progress>
+          <p>45% funded – thanks for the love! 💚</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="position:relative; z-index:1;">
+    <div class="wrap">
+      <p> <span id="year"></span> DMERSE — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Particle background
+    const particleContainer = document.getElementById('particles');
+    const numParticles = 80;
+    for(let i = 0; i < numParticles; i++){
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * window.innerWidth + 'px';
+      particle.style.top = Math.random() * window.innerHeight + 'px';
+      particle.style.animationDuration = 5 + Math.random() * 5 + 's';
+      particle.style.width = 2 + Math.random() * 4 + 'px';
+      particle.style.height = particle.style.width;
+      particleContainer.appendChild(particle);
+    }
+
+    // Footer year
+    const yearSpan = document.getElementById('year');
+    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

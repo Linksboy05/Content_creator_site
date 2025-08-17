@@ -68,6 +68,13 @@ a { text-decoration: none; color: inherit; }
 .vod-thumb { background: #333; height: 120px; border-radius: var(--radius) var(--radius) 0 0; } 
 .vod-meta { padding: 10px; } 
 
+.vod-embed {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+
 /* Sponsors */ 
 .sponsor-grid { display: flex; gap: 20px; flex-wrap: wrap; } 
 .sponsor-card { background: #191919; padding: 10px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; } 
@@ -162,4 +169,50 @@ a { text-decoration: none; color: inherit; }
     transform: translateY(-50px) translateX(50px);
     opacity: 0;
   }
+}
+
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.carousel-btn {
+  background: rgba(0,0,0,0.6);
+  color: var(--accent);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,255,0,0.4);
+}
+
+.vod-embed {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius);
 }

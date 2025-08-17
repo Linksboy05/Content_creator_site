@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DMERSE — Sponsors</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+  <style>
+    /* Ensure footer is always at the bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #0b0e11; /* match your background */
+      position: relative;
+      margin: 0;
+    }
+    main { flex: 1; }
+
+    /* Particle background */
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0; /* behind content */
+      overflow: hidden;
+      background: #0b0e11; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles"></div>
+
+  <!-- Header -->
+  <header class="site-header" style="position:relative; z-index:1;">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">▶</span>
+        <span class="brand-text">DMERSE</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+
+      <nav class="main-nav">
+        <a href="index.html#live">Live</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="vods.html">VODs</a>
+        <a href="index.html#about">About</a>
+        <a href="sponsors.html" class="active">Sponsors</a>
+        <a href="support.html">Support</a>
+        <a href="index.html#socials">Socials</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Sponsors Section -->
+  <main style="position:relative; z-index:1;">
+    <section class="section">
+      <div class="wrap">
+        <h2>🤝 My Sponsors</h2>
+        <p>Big shoutout to the amazing brands and partners that support my streams!</p>
+
+        <!-- Sponsor Grid -->
+        <div class="sponsor-grid">
+          <a href="https://sponsor1.com" target="_blank" class="sponsor-card">
+            <img src="sponsor1.png" alt="Sponsor 1 Logo">
+          </a>
+          <a href="https://sponsor2.com" target="_blank" class="sponsor-card">
+            <img src="sponsor2.png" alt="Sponsor 2 Logo">
+          </a>
+          <a href="https://sponsor3.com" target="_blank" class="sponsor-card">
+            <img src="sponsor3.png" alt="Sponsor 3 Logo">
+          </a>
+        </div>
+
+        <!-- Optional Fun Feature: Sponsor Spotlight -->
+        <div class="sponsor-spotlight card" style="margin-top:40px; text-align:center;">
+          <h3>🌟 Sponsor Spotlight</h3>
+          <p>Each week, we feature a sponsor and what they bring to the community!</p>
+          <a href="https://sponsor1.com" target="_blank" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="position:relative; z-index:1;">
+    <div class="wrap">
+      <p> <span id="year"></span> DMERSE — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Particle background script (copy from your main script)
+    const particleContainer = document.getElementById('particles');
+    const numParticles = 80;
+    for(let i = 0; i < numParticles; i++){
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * window.innerWidth + 'px';
+      particle.style.top = Math.random() * window.innerHeight + 'px';
+      particle.style.animationDuration = 5 + Math.random() * 5 + 's';
+      particle.style.width = 2 + Math.random() * 4 + 'px';
+      particle.style.height = particle.style.width;
+      particleContainer.appendChild(particle);
+    }
+
+    // Footer year
+    const yearSpan = document.getElementById('year');
+    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
